@@ -6,9 +6,13 @@ void main() {
   int diasDesdeColheita = 40;
   bool isMadura;
 
+  frutaEstaMadura(diasDesdeColheita);
+}
+
+bool frutaEstaMadura(int diasDesdeColheita) {
   if(diasDesdeColheita >= 40) {
-    isMadura = true;
+    return true;
   } else {
-    isMadura = false;
+    return false;
   }
 }
