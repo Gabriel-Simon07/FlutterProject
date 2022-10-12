@@ -1,18 +1,17 @@
+import 'fruta.dart';
+
 void main() {
   String nome = 'Laranja';
   double peso = 100.2;
   String cor = 'Verde e laranja';
   String sabor = 'Doce e cítrica';
   int diasDesdeColheita = 40;
-  bool isMadura;
+  bool isMadura = true;
 
-  frutaEstaMadura(diasDesdeColheita);
-  // mostrarMadura(nome, diasDesdeColheita, cor: 'laranja');
-  mostrarMadura(nome, diasDesdeColheita, cor: 'Roxa');
-  int valor = quantoTempoFalta(diasDesdeColheita);
-  print('Faltam $valor dias');
+  Fruta fruta = Fruta(nome, peso, cor, sabor, diasDesdeColheita, isMadura: isMadura);
+  fruta.estaMadura(41);
 }
-// void mostrarMadura(String nome, int dias, {String cor = 'sem cor'}) {
+
 void mostrarMadura(String nome, int dias, {required String cor}) {
   if(dias >= 30) {
     print('A $nome está madura');
