@@ -1,12 +1,14 @@
-class Fruta {
-  String nome;
-  double peso;
-  String cor;
+import 'alimento.dart';
+
+class Fruta extends Alimento {
   String sabor;
   int diasDesdeColheita;
   bool? isMadura;
 
-  Fruta(this.nome, this.peso, this.cor, this.sabor, this.diasDesdeColheita, {this.isMadura}) {}
+  Fruta(
+      String nome, double peso, String cor, this.sabor, this.diasDesdeColheita,
+      {this.isMadura})
+      : super(nome, cor, peso);
 
   void estaMadura(int diasParaMadura) {
     isMadura = diasParaMadura >= diasDesdeColheita;
@@ -14,4 +16,7 @@ class Fruta {
         '$diasParaMadura para poder comer. Ela está madura? $isMadura');
   }
 
+  void fazerSuco() {
+    print('Você fez um ótimo suco de $nome');
+  }
 }

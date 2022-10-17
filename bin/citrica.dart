@@ -1,10 +1,7 @@
-class Citricas {
-  String nome;
-  double peso;
-  String cor;
-  int diasDesdeColheita;
-  bool? isMadura;
+import 'fruta.dart';
+
+class Citricas extends Fruta {
   double nivelAzedo;
 
-  Citricas(this.nome, this.peso, this.cor, this.diasDesdeColheita, this.isMadura, this.nivelAzedo);
+  Citricas(String nome, double peso, String cor, int diasDesdeColheita, bool isMadura, this.nivelAzedo) : super(nome, peso, cor, sabor, diasDesdeColheita);
 }
