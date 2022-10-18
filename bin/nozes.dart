@@ -1,10 +1,9 @@
-class Nozes {
-  String nome;
-  double peso;
-  String cor;
-  int diasDesdeColheita;
-  bool? isMadura;
+import 'fruta.dart';
+
+class Nozes extends Fruta {
   double porcentagemOleoNatural;
 
-  Nozes(this.nome, this.peso, this.cor, this.diasDesdeColheita, this.isMadura, this.porcentagemOleoNatural);
+  Nozes(String nome, double peso, String cor, String sabor,
+      int diasDesdeColheita, this.porcentagemOleoNatural)
+      : super(nome, peso, cor, sabor, diasDesdeColheita);
 }
