@@ -10,6 +10,10 @@ void main() {
 
   Fruta fruta = Fruta(nome, peso, cor, sabor, diasDesdeColheita, isMadura: isMadura);
   fruta.estaMadura(41);
+
+  print('ALIMENTOS');
+  Fruta melancia = Fruta('Melancia', 0.500, 'Verde', 'Doce', 2);
+  melancia.printAlimentos();
 }
 
 void mostrarMadura(String nome, int dias, {required String cor}) {
