@@ -16,17 +16,17 @@ class Legumes extends Alimento implements Bolo {
   }
 
   @override
-  void assar() {
-    // TODO: implement assar
+  void separarIngredientes() {
+    print('Pegar a fruta');
   }
 
   @override
   void fazerMassa() {
-    // TODO: implement fazerMassa
+    print('Misturar a fruta com a massa');
   }
 
   @override
-  void separarIngredientes() {
-    // TODO: implement separarIngredientes
+  void assar() {
+    print('Colocar no forno');
   }
 }
