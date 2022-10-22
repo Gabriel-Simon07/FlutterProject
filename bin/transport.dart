@@ -1,13 +1,21 @@
 void main() {
-  escolheMeioTransporte(1);
+  escolheMeioTransporte(Transporte.BIKE);
 }
 
-void escolheMeioTransporte(int locomocao){
-  if(locomocao == 0) {
+void escolheMeioTransporte(Transporte transporte){
+  if(transporte == Transporte.CARRO) {
     print('Vou de carro');
-  } else if(locomocao == 1) {
+  } else if(transporte == Transporte.ONIBUS) {
     print('Vou de ônibus');
   } else {
-    print('Vou de bike');
+    print('Vou de outro tipo de transporte');
   }
+}
+
+enum Transporte {
+  CARRO,
+  BIKE,
+  ONIBUS,
+  AVIAO,
+  TREM,
 }
