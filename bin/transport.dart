@@ -1,19 +1,10 @@
+import 'enum/Transporte.dart';
+
 void main() {
-  escolheMeioTransporteSemSwitch(Transporte.BIKE);
-  escolheMeioTransporteComSwitch(Transporte.AVIAO);
+  escolheMeioTransporte(Transporte.AVIAO);
 }
 
-void escolheMeioTransporteSemSwitch(Transporte transporte) {
-  if(transporte == Transporte.CARRO) {
-    print('Vou de carro');
-  } else if(transporte == Transporte.ONIBUS) {
-    print('Vou de ônibus');
-  } else {
-    print('Vou de outro tipo de transporte');
-  }
-}
-
-void escolheMeioTransporteComSwitch(Transporte transporte) {
+void escolheMeioTransporte(Transporte transporte) {
   switch(transporte) {
     case Transporte.CARRO:
       print('Vou de carro');
@@ -24,12 +15,4 @@ void escolheMeioTransporteComSwitch(Transporte transporte) {
     default:
       print('Vou de outro tipo de transporte');
   }
-}
-
-enum Transporte {
-  CARRO,
-  BIKE,
-  ONIBUS,
-  AVIAO,
-  TREM,
 }
