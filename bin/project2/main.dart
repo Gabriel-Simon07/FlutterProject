@@ -1,7 +1,7 @@
-import 'enum/Transporte.dart';
 import 'lugar.dart';
 import 'transport.dart';
 import 'viagem.dart';
+import '../enum/Transporte.dart';
 
 void main() {
   Set<String> registrosVisitados = <String>{};

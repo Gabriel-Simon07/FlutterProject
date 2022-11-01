@@ -1,4 +1,4 @@
-import 'enum/Transporte.dart';
+import '../enum/Transporte.dart';
 
 String registrarDestinos(String destino, Set<String> registrosVisitados) {
   registrosVisitados.add(destino);  
