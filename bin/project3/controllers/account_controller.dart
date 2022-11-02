@@ -3,7 +3,7 @@ import '../models/account.dart';
 class AccountController {
   final Map<String, Account> _database = {};
 
-  addCount({required String id, required Account account}) {
+  addAccount({required String id, required Account account}) {
     _database[id] = account;
   }
 
