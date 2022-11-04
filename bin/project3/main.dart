@@ -24,8 +24,14 @@ void main() {
           )
   );
 
- bool result = accountController.makeTransfer(
-     idSender: "Kako", idReceiver: "Ricarth", amount: 700);
-
- print(result);
+ 
+    try {
+    accountController.makeTransfer(
+      idSender: "Kako", 
+      idReceiver: "Ricarth", 
+      amount: 700
+    );
+    } on FormatException {
+    print("Error");
+    }
 }
