@@ -31,7 +31,7 @@ void main() {
       idReceiver: "Ricarth", 
       amount: 700
     );
-    } on FormatException {
-    print("Error");
+    } on FormatException catch(e) {
+    print("Error "+ e.message);
     }
 }
