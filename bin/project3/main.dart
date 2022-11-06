@@ -31,7 +31,8 @@ void main() {
       idReceiver: "Ricarth", 
       amount: 700
     );
-    } on FormatException catch(e) {
-    print("Error "+ e.message);
+    } catch(e, stackTrace) {
+    print(e.runtimeType);
+    print(stackTrace);
     }
 }
