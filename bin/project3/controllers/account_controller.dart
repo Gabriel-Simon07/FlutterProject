@@ -1,3 +1,4 @@
+import '../exceptions/BankControllerException.dart';
 import '../models/account.dart';
 
 class AccountController {
@@ -13,7 +14,7 @@ class AccountController {
     }
 
     if(!verifyId(idReceiver)) {
-      return false;
+      throw ReceiverInvalidException();
     }
     
     if(!verifyId(idReceiver)) {
@@ -24,7 +25,7 @@ class AccountController {
     Account accountReceiver = _database[idReceiver]!;
 
    if (!accountSender.isAuthenticated) {
-     return false;
+     throw SenderIdInvalidException();
    }
 
    if (accountSender.balance < amount) {
