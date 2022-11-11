@@ -25,7 +25,7 @@ class AccountController {
     Account accountReceiver = _database[idReceiver]!;
 
    if (!accountSender.isAuthenticated) {
-     throw SenderIdInvalidException();
+     throw SenderIdInvalidException(idSender: idSender);
    }
 
    if (accountSender.balance < amount) {

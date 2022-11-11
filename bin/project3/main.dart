@@ -1,4 +1,5 @@
 import 'controllers/account_controller.dart';
+import 'exceptions/BankControllerException.dart';
 import 'models/account.dart';
 
 void main() {
@@ -34,5 +35,15 @@ void main() {
     } catch(e, stackTrace) {
     print(e.runtimeType);
     print(stackTrace);
+    }
+
+    try {
+    accountController.makeTransfer(
+      idSender: "Kako222", 
+      idReceiver: "Ricarth", 
+      amount: 700
+    );
+    } on SenderIdInvalidException catch(e) {
+    print('O id ${e.idSender} não existe');
     }
 }
