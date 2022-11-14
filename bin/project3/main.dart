@@ -44,6 +44,7 @@ void main() {
       amount: 700
     );
     } on SenderIdInvalidException catch(e) {
+    print(e);
     print('O id ${e.idSender} não existe');
     }
 }
